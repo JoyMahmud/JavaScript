@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+            <div class="maincontent">
+
+                <script>
+
+                    function formatAMPM(date) {
+                        var hours   = date.getHours();
+                        var minutes = date.getMinutes();
+                        var seconds = date.getSeconds();
+
+                        var ampm = hours >= 12 ? 'pm' : 'am';
+                        hours = hours % 12;
+                        hours = hours ? hours : 12; // the hour '0' should be '12'
+
+                        hours = hours < 10 ? '0'+hours : hours;
+                        minutes = minutes < 10 ? '0'+minutes : minutes;
+                        seconds = seconds < 10 ? '0'+seconds : seconds;
+
+                        var strTime = hours + ' : ' + minutes + ' : ' + seconds + ' ' + ampm;
+                        return strTime;
+                    }
+
+                    var date = new Date();
+                    var result = formatAMPM(date);
+                    document.write("BD Local Time: "+result);
+
+
+                </script>
+            </div>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
