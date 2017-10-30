@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+            <div class="maincontent">
+
+
+                <!------------------the use of alert function------------------------->
+                <h3>This Button for alert Function</h3>
+                <script>
+                   function alertFunc() {
+                       alert("Do You want to Delete this");
+                   }
+                </script>
+                <button onclick="alertFunc()">Delete</button>
+
+
+
+
+                <!--------------------the use of confirm function---------------------->
+                <h3>This Button for confirm Function</h3>
+                <script>
+                    function confirmFunc() {
+                        confirm("Do you  want to delete !");
+                    }
+                </script>
+                <button onclick="confirmFunc()">Delete</button>
+
+
+
+
+
+                <!----------------------the use of prompt function---------------------->
+                <h3>This Button for Prompt funciton</h3>
+                <script type="text/javascript">
+                    function promptFunc() {
+                        var name = prompt("Enter Your name Here..");
+
+                        if (name == ""){
+                            alert("Field Must not be Empty!");
+                        }else {
+                            document.write("Name Is: "+name);
+                        }
+                    }
+                </script>
+                <button onclick="promptFunc()">Action</button>
+
+
+
+
+            </div>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
