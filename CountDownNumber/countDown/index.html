@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+            <div class="maincontent">
+                <script>
+                   var countdown;
+                   var countdownNumber;
+
+                   function countdownInit() {
+                       countdownNumber = 61;
+                       countdownTrigger();
+                   }
+
+                   function countdownTrigger() {
+                       if(countdownNumber>0){
+                           countdownNumber--;
+                           document.getElementById("show").innerHTML = countdownNumber;
+                           if (countdownNumber>0){
+                               countdown = setTimeout("countdownTrigger()", 1000);
+                           }
+                       }
+
+                   }
+                   
+                   function countdownClear() {
+                       clearTimeout(countdown);
+                   }
+
+                </script>
+                <div>
+                    <input type="button" value="Start" onclick="countdownInit()">
+                    <input type="button" value="Stop" onclick="countdownClear()">
+                </div>
+                <div id="show"></div>
+            </div>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
