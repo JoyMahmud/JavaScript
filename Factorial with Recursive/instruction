@@ -1,1 +1,10 @@
 
+Recursive:
+Recursive Means call a function into another function.
+
+Example:
+function recursive1(){
+    function recursive2(){
+    
+    }
+}
