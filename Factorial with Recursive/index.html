@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+            <div class="maincontent">
+
+                <script>
+                    var num = prompt("Your Factorial Number is...")
+                    function factorial(n) {
+                        if(n==0){
+                            return 1;
+                        }else{
+
+                           return n*factorial(n-1);
+                        }
+                    }
+                    document.write(factorial(num));
+
+
+                </script>
+
+
+            </div>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
