@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+            <div class="maincontent">
+
+                <script>
+
+                    function factorial(n) {
+                        if(n==0){
+                            return 1;
+                        }else{
+                            product = 1;
+                            for (i=1; i<=n; i++){
+                                product*= i;
+                            }
+                            document.write("Factorize Result: "+product);
+                        }
+                    }
+
+                </script>
+                <h3>Enter Your Number by clicking this button that you want to Factorize</h3><br>
+                <button onclick="factorial(prompt('Find The Factorial of ...'))">Enter Number</button>
+
+
+
+
+
+            </div>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
