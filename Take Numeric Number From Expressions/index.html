@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+            <div class="maincontent">
+                <table>
+                    <tr>
+                        <td>Enter Expression</td>
+                        <td><input type="text" id="getValue"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Check" onclick="getNumber()"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Result</td>
+                        <td><textarea id="showResult"></textarea></td>
+                    </tr>
+                </table>
+
+                <script type="text/javascript">
+
+                    function getNumber() {
+                        document.getElementById("showResult").value = ""; //at first empty kore nibe..
+                        var getStr = document.getElementById("getValue").value;
+                        var result = getStr.match(/\d+/g);
+
+                        if (result !=null) {
+                            for (var i = 0; i < result.length; i++) {
+                                document.getElementById("showResult").value += result[i] + "\n";
+                            }
+                        }
+                    }
+
+                </script>
+
+            </div>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
