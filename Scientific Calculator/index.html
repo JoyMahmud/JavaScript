@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+            <div class="maincontent">
+                <form name="frm">
+                    <table>
+                        <caption>Scientific Calculator</caption>
+                        <tr>
+                            <td>Input Box:</td>
+                            <td><input type="text" name="getValue"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" value="Absolute" onclick="calculator(1)"></td>
+                            <td><input type="button" value="Round" onclick="calculator(2)"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" value="Sine" onclick="calculator(3)"></td>
+                            <td><input type="button" value="Cosine" onclick="calculator(4)"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" value="Tangent" onclick="calculator(5)"></td>
+                            <td><input type="button" value="Log" onclick="calculator(6)"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" value="Floor" onclick="calculator(7)"></td>
+                            <td><input type="button" value="Ceil" onclick="calculator(8)"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" value="Square Root" onclick="calculator(9)"></td>
+                            <td><input type="button" value="Random" onclick="calculator(10)"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" value="Max" onclick="calculator(11)"></td>
+                            <td><input type="button" value="Min" onclick="calculator(12)"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" value="E" onclick="calculator(13)"></td>
+                            <td><input type="button" value="Pi" onclick="calculator(14)"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Result Box:</td>
+                            <td><input type="text" name="showResult"/></td>
+                        </tr>
+
+                    </table>
+                </form>
+
+                <script type="text/javascript">
+
+                    function calculator(process) {
+                        with (document.frm)
+                        switch (process){
+                            case 1:
+                                showResult.value = Math.abs(getValue.value);
+                                break;
+
+                            case 2:
+                                showResult.value = Math.round(getValue.value);
+                                break;
+
+                            case 3:
+                                showResult.value = Math.sin(convDegree(getValue.value));
+                                break;
+
+                            case 4:
+                                showResult.value = Math.cos(convDegree(getValue.value));
+                                break;
+
+                            case 5:
+                                showResult.value = Math.tan(convDegree(getValue.value));
+                                break;
+
+                            case 6:
+                                showResult.value = Math.log(getValue.value);
+                                break;
+
+                            case 7:
+                                showResult.value = Math.floor(getValue.value);
+                                break;
+
+                            case 8:
+                                showResult.value = Math.ceil(getValue.value);
+                                break;
+
+                            case 9:
+                                showResult.value = Math.sqrt(getValue.value);
+                                break;
+
+                            case 10:
+                                showResult.value = Math.random();
+                                break;
+
+                            case 11:
+                                alert(Math.max(getValue.value, prompt("Enter Number", "0")) + " is greater than the number");
+                                break;
+
+                            case 12:
+                                alert(Math.min(getValue.value, prompt("Enter Number", "0")) + " is smaller than the number");
+                                break;
+
+                            case 13:
+                                showResult.value = Math.E;
+                                break;
+
+                            case 14:
+                                showResult.value = Math.PI;
+                                break;
+                        }
+                    }
+
+                    /*this function for sin,cos,tan*/
+                    function convDegree(x) {
+                        return x*22/7/180;
+                    }
+
+                    /*this function for random*/
+
+
+                </script>
+
+            </div>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
