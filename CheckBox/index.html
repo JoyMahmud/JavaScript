@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+
+            <section class="maincontent">
+
+                <form action="" method="" name="myForm">
+                    <table>
+                        <tr>
+                            <td><input type="text" name="myText" onchange="doCalculation(this.form, this.name)"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="mycheckbox" onclick="doCalculation(this.form, this.name)"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="text" name="myResult" onchange="doCalculation(this.form, this.name)"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="reset" name="reset" value="Refresh"/></td>
+                        </tr>
+                    </table>
+                </form>
+
+                <script type="text/javascript">
+
+                    function doCalculation(getFrom, getName) {
+                        if(getName == "myResult"){
+                            if(getFrom.mycheckbox.checked){
+                                getFrom.myText.value = Math.sqrt(getFrom.myResult.value);
+                            }else {
+                                getFrom.myText.value = getFrom.myResult.value/2;
+                            }
+                        }else{
+                            if(getFrom.mycheckbox.checked){
+                                getFrom.myResult.value = getFrom.myText.value * getFrom.myText.value;
+                            }else {
+                                getFrom.myResult.value = getFrom.myText.value * 2;
+                            }
+                        }
+                    }
+
+                </script>
+
+            </section>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
