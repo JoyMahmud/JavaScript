@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+
+            <section class="maincontent">
+
+                <form action="" method="" name="myForm">
+                    <table>
+                        <tr>
+                            <td><input type="text" name="myText" value=""></td>
+                            <td><input type="button" name="btn" value="Click" onclick="testResult()"/></td>
+                        </tr>
+                    </table>
+                </form>
+
+                <script type="text/javascript">
+
+                    function testResult() {
+                        var getText = myForm.myText.value;
+
+                        if(getText == ""){
+                            alert("Please Type Something...!");
+                        }else {
+                            alert("You Typed "+getText);
+                        }
+                    }
+
+                </script>
+
+            </section>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
