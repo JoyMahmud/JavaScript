@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+
+            <section class="maincontent">
+
+                <form name="myForm" onsubmit="testCheckbox()">
+                    <table>
+                        <tr>
+                            <td>Select</td>
+                            <td>
+                                <input type="checkbox" name="chbox" value="PHP"> PHP<br>
+                                <input type="checkbox" name="chbox" value="LARAVEL"> LARAVEL<br>
+                                <input type="checkbox" name="chbox" value="JAVASCRIPT"> JAVASCRIPT<br>
+                                <input type="checkbox" name="chbox" value="BOOTSTRAP"> BOOTSTRAP<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="subBtn" value="Submit">
+                                <input type="reset" name="resBtn" value="Refresh">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </form>
+
+                <script type="text/javascript">
+                    function testCheckbox() {
+                        document.write("You Selected :"+selectItem());
+                    }
+
+                    function selectItem() {
+                        var cd = "<ul>";
+                        for (i=0; i<=3; i++){
+                            var myItem = document.myForm.chbox[i];
+                            if (myItem.checked){
+                                cd += "<li>"+myItem.value;
+                            }
+                        }
+                        cd += "</ul>"
+                        return cd;
+                    }
+
+                </script>
+
+            </section>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
