@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+
+            <section class="maincontent">
+
+                <form name="myForm" onsubmit="testCheckbox()">
+                    <table>
+                        <tr>
+                            <td>Select</td>
+                            <td>
+                                <input type="radio" name="rabox" value="PHP"> PHP<br>
+                                <input type="radio" name="rabox" value="LARAVEL"> LARAVEL<br>
+                                <input type="radio" name="rabox" value="JAVASCRIPT"> JAVASCRIPT<br>
+                                <input type="radio" name="rabox" value="BOOTSTRAP"> BOOTSTRAP<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="subBtn" value="Submit">
+                                <input type="reset" name="resBtn" value="Refresh">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </form>
+
+                <script type="text/javascript">
+                    function testCheckbox() {
+                        document.write("You Selected : "+selectItem());
+                    }
+
+                    function selectItem() {
+                        for (i=0; i<=3; i++){
+                            var getcheck = document.myForm.rabox[i];
+                            if (getcheck.checked){
+                                return getcheck.value;
+                            }
+                        }
+                    }
+
+                </script>
+
+            </section>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
