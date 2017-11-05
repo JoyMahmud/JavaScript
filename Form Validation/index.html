@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JavaScript</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+        <section class="content">
+            <div class="header">
+                <h1><script>document.write("Tutorial:JavaScript Fundamental")</script></h1>
+            </div>
+
+            <section class="maincontent">
+
+                <form name="myForm" method="post" onsubmit="return validateForm();">
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" name="name"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="text" name="email"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Telephone:</td>
+                            <td>
+                                <input type="text" name="telephone"><br>
+                                <input type="checkbox" name="notCall" onclick="enableDisable(this);"> Please Don't Call Me!
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Help Area:</td>
+                            <td>
+                                <select name="subject" value="">
+                                    <option>Select One</option>
+                                    <option>Customer Service</option>
+                                    <option>Question</option>
+                                    <option>Comment</option>
+                                    <option>Others</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Comment:</td>
+                            <td><input type="text" name="comment"></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="subBtn" value="Submit">
+                                <input type="reset" name="resBtn" value="Refresh">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                               <div id="state"></div>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </form>
+
+                <script type="text/javascript">
+                    function validateForm() {
+                        var name      = document.myForm.name;
+                        var email     = document.myForm.email;
+                        var telephone = document.myForm.telephone;
+                        var notCall   = document.myForm.notCall;
+                        var subject   = document.myForm.subject;
+                        var comment   = document.myForm.comment;
+
+                        if(name.value == ""){
+                            document.getElementById("state").innerHTML = "Please enter your name!";
+                            return false;
+                        }
+                        if(email.value == ""){
+                            document.getElementById("state").innerHTML = "Please enter your email!";
+                            return false;
+                        }
+                        if(email.value.indexOf("@",0)<0){
+                            document.getElementById("state").innerHTML = "Please enter your valid e-mail address!";
+                            return false;
+                        }
+                        if(email.value.indexOf(".",0)<0){
+                            document.getElementById("state").innerHTML = "Please enter your valid e-mail address!";
+                            return false;
+                        }
+                        if(telephone.value == "" && notCall.checked == false){
+                            document.getElementById("state").innerHTML = "Please enter your phone number!";
+                            return false;
+                        }
+                        if(telephone.value.length !=11){
+                            document.getElementById("state").innerHTML = "Phone number must be 11 digits!";
+                            return false;
+                        }
+                        if(subject.selectedIndex<1){
+                            document.getElementById("state").innerHTML = "Please tell us how we can help you!";
+                            return false;
+                        }
+                        if(comment.value<1){
+                            document.getElementById("state").innerHTML = "Please put a comment!";
+                            return false;
+                        }
+                    }
+
+                    function enableDisable(chkbox) {
+                        if(chkbox.checked == true){
+                            document.myForm.telephone.disabled = true;
+                        }else {
+                            document.myForm.telephone.disabled = false;
+                        }
+                    }
+
+                </script>
+
+            </section>
+            <div class="footer">
+                <h4><script>document.write("&copy; All Right Reserved TP")</script></h4>
+            </div>
+        </section>
+    <body>
+
+    </body>
+</html>
